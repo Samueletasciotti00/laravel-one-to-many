@@ -14,6 +14,8 @@ use Illuminate\Database\Seeder;
 // Import dell Helper;
 use App\Functions\ProjectHelper;
 
+use App\Models\Category;
+
 class ProjectSeeder extends Seeder
 {
     /**
@@ -25,6 +27,7 @@ class ProjectSeeder extends Seeder
 
             $new_project = new Project();
             $new_project->title = $faker->sentence;
+            $new_project->category_id = Category::inRandomOrder()->first()->id;
             $new_project->slug = ProjectHelper::generateSlug($faker->sentence, Project::class);
             $new_project->description = $faker->text(100);
             $new_project->save();

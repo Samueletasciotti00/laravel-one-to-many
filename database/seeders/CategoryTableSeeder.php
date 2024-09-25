@@ -19,7 +19,6 @@ class CategoryTableSeeder extends Seeder
 
         foreach($data as $category){
             $new_category = new Category();
-            $new_category->category_id = Category::inRandomOrder()->first()->id;
             $new_category->name = $category;
             $new_category->slug = ProjectHelper::generateSlug($new_category->name, Category::class);
             $new_category->save();

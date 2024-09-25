@@ -5,7 +5,7 @@
 <div class="container my-5">
     <h1>Create</h1>
 
-    <form action="{{route('project.store')}}" method="POST">
+    <form action="{{route('admin.project.store')}}" method="POST">
         @csrf
 
         <div class="mb-3">
