@@ -15,5 +15,5 @@ class Project extends Model
     }
 
     // Fillable delle colonne
-    protected $fillable = ['title','slug'];
+    protected $fillable = ['title','slug','description'];
 }

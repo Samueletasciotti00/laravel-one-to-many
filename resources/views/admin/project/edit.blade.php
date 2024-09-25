@@ -9,7 +9,7 @@
         @method('PUT')
         <input type="text" name="title" value="{{ $project->title }}">
         <input type="text" name="description" value="{{ $project->description }}">
-
+        
         <button type="submit">Update</button>
     </form>
 </div>

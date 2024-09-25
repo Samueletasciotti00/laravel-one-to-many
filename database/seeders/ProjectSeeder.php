@@ -26,9 +26,9 @@ class ProjectSeeder extends Seeder
         for ($i = 0; $i < 100; $i++) {
 
             $new_project = new Project();
-            $new_project->title = $faker->sentence;
+            $new_project->title = $faker->sentence();
             $new_project->category_id = Category::inRandomOrder()->first()->id;
-            $new_project->slug = ProjectHelper::generateSlug($faker->sentence, Project::class);
+            $new_project->slug = ProjectHelper::generateSlug($new_project->title, Project::class);
             $new_project->description = $faker->text(100);
             $new_project->save();
         }
